@@ -7,19 +7,11 @@ const subtract = function(Num1, Num2) {
 };
 
 const sum = function(array) {
-  let sum = 0;
-	for (let idx = 0; idx < array.length; ++idx){
-    sum += array[idx];
-  }
-  return sum;
+  return array.reduce((accumulator, currVal) => accumulator + currVal, 0);
 };
 
 const multiply = function(array) {
-  let output = 1;
-	for (let idx = 0; idx < array.length; ++idx){
-    output *= array[idx];
-  }
-  return output;
+  return array.reduce((accumulator,currVal) => accumulator*currVal, 1);
 };
 
 const power = function(base, exp) {
